@@ -52,7 +52,7 @@ SCHEDULER_ETA_MIN = 1e-6
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Dataset Root Directory
-DATASET_ROOT = '/home/tec/Desktop/Project/Datasets/Cityscapes_Flat'
+DATASET_ROOT = r"/home/tec/Desktop/Project/Datasets/Cityscapes_Flat"
 
 # Expected Cityscapes folder structure:
 # Cityscapes/
