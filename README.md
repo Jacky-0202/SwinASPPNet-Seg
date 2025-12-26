@@ -46,6 +46,7 @@ SwinASPPNet-Seg/
 ├── config.py          # Hyperparameters configuration
 ├── train.py           # Main training script
 ├── predict.py         # Inference and visualization script
+├── preprocess_cityscapes.py
 └── README.md
 ```
 
