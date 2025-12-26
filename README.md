@@ -124,5 +124,5 @@ Optimizer: AdamW with Cosine Annealing Warm Restarts (T_0=10, T_mult=2).
 
 ---
 ### 🤝 Reference
-Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
-Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (DeepLabV3+)
+- [Swin Transformer](https://arxiv.org/pdf/2103.14030)
+- [DeepLabV3+](https://github.com/VainF/DeepLabV3Plus-Pytorch)
