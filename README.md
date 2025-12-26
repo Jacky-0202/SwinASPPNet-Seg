@@ -24,6 +24,11 @@ Cosine Annealing with Warm Restarts: Prevents getting stuck in local minima.
 Production-Ready Inference: Supports full-image evaluation via dynamic resizing (512x1024) and bilinear upsampling.
 
 ---
+### 🧠 Model Arichitecture
+
+![Model Architecture](figures/SwinASPPNet_arichitecture.png)
+
+---
 ### 📂 Project Structure
 
 ```
@@ -73,6 +78,7 @@ The model expects a flat directory structure. We provide a helper script `prepro
 python preprocess_cityscapes.py
 ```
 
+```
 Datasets/Cityscapes_Flat/
 ├── images/
 │   ├── train/    # .png images
@@ -80,6 +86,8 @@ Datasets/Cityscapes_Flat/
 └── masks/
     ├── train/    # .png masks (labelIds or trainIds)
     └── val/
+```
+
 Update the paths in config.py accordingly.
 
 ---
@@ -92,7 +100,6 @@ python train.py
 ```
 
 Configuration: Modify config.py to change MODEL_IDX (Backbone), BATCH_SIZE, or LR.
-
 Monitoring: Training curves (Loss/mIoU) are saved to checkpoints/ automatically.
 
 2. Inference (Testing)
@@ -111,14 +118,11 @@ Mechanism: The script resizes input images to 512x1024 for inference and upsampl
 ---
 ### 📊 Performance Notes
 Backbone: Swin-Large (Window 12, 384)
-
-Training Size: 768x768 (Random Crop & Scale)
-
+Training Size: 512x512 (Random Crop & Scale)
 Inference Size: 512x1024
-
 Optimizer: AdamW with Cosine Annealing Warm Restarts (T_0=10, T_mult=2).
 
-🤝 Reference
+---
+### 🤝 Reference
 Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
-
 Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation (DeepLabV3+)
