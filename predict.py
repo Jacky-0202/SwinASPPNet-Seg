@@ -23,7 +23,7 @@ OUTPUT_DIR = 'test_results'     # Directory for output results
 
 # Automatically construct model path
 # MODEL_PATH = os.path.join(config.SAVE_DIR, 'best_model.pth')
-MODEL_PATH = os.path.join(config.SAVE_DIR, 'best_model.pth')
+MODEL_PATH = "/home/tec/Desktop/Project/SwinASPPNet-Seg/checkpoints/Swin_Large_384_Cityscapes/best_model.pth"
 
 # [MODIFIED] Manually set Inference Size (Height, Width)
 # We strictly use 512x1024 regardless of config settings.
