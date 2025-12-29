@@ -10,18 +10,16 @@ Hybrid Architecture: Uses Swin Transformer (Tiny/Small/Base/Large) as the encode
 Low VRAM Optimization:
 
 Replaced all BatchNorm with GroupNorm, allowing stable training even with Batch Size = 1.
-
 Supports Mixed Precision Training (AMP) for faster convergence.
 
 Advanced Training Strategies:
 
 Differential Learning Rates: 0.1x LR for the pretrained backbone, 1.0x LR for the decoder head.
-
 Multi-scale Training: Random scaling (0.5x ~ 2.0x) and cropping during training.
-
 Cosine Annealing with Warm Restarts: Prevents getting stuck in local minima.
-
 Production-Ready Inference: Supports full-image evaluation via dynamic resizing (512x1024) and bilinear upsampling.
+
+![Results](figures/results.png)
 
 ---
 ### 🧠 Model Arichitecture
@@ -54,10 +52,12 @@ SwinASPPNet-Seg/
 ### 🛠️ Installation
 Clone the repository
 
-Bash
 
+```bash
 git clone https://github.com/YourUsername/SwinASPPNet-Seg.git
 cd SwinASPPNet-Seg
+```
+
 Install dependencies
 
 ```bash
@@ -65,7 +65,6 @@ pip install torch torchvision timm tqdm matplotlib pandas opencv-python
 ```
 
 Prepare Dataset (Cityscapes) Organize your dataset as follows:
-
 The model expects a flat directory structure. We provide a helper script `preprocess_cityscapes.py` to convert the standard Cityscapes dataset (nested folders) into the required format.
 
 **Prerequisite:** Ensure you have generated `labelTrainIds` using the official Cityscapes scripts (`csCreateTrainIdLabelImgs`).
